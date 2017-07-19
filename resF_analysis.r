@@ -2787,3 +2787,57 @@ LabQuartile <- c("Low Verbal Mem.", "", "", "High Verbal Mem.")
 Draw_Int("linear", "number", 0, D2, reglen, turt, sspan, numQuartile, LabQuartile, c(250,600), 0.85, 0,
          "Word Length", "Total Reading Time (ms)", "Verbal Working Memory x Word Length", 
          "./data/res_F/resFigures/5.turt/Int_turt_sspan_reglen2.png", 24, 6)
+
+
+# contribution of decoding and oral knowledge to reading comprehension
+a <- lm(readcomp.comp_bct ~ decod.comp_bct + oral.comp_bct, data=D2)
+summary(a)
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -1.48649 -0.31548 -0.01405  0.42244  1.00256 
+# 
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)    -0.009340   0.003354  -2.785  0.00536 ** 
+#   decod.comp_bct  0.188090   0.004047  46.481  < 2e-16 ***
+#   oral.comp_bct   0.756480   0.004116 183.772  < 2e-16 ***
+#   ---
+#   Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+# 
+# Residual standard error: 0.5165 on 23749 degrees of freedom
+# Multiple R-squared:  0.7319,	Adjusted R-squared:  0.7318 
+# F-statistic: 3.241e+04 on 2 and 23749 DF,  p-value: < 2.2e-16
+
+a1 <- lm(readcomp.comp_bct ~ oral.comp_bct, data=D2)
+summary(a1)
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -1.26856 -0.33750  0.02251  0.41974  0.94038 
+# 
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)   -0.010018   0.003503   -2.86  0.00424 ** 
+#   oral.comp_bct  0.861463   0.003594  239.66  < 2e-16 ***
+#   ---
+#   Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+# 
+# Residual standard error: 0.5395 on 23750 degrees of freedom
+# Multiple R-squared:  0.7075,	Adjusted R-squared:  0.7075 
+# F-statistic: 5.744e+04 on 1 and 23750 DF,  p-value: < 2.2e-16
+
+a2 <- lm(readcomp.comp_bct ~ decod.comp_bct, data=D2)
+summary(a2)
+# Residuals:
+#   Min      1Q  Median      3Q     Max 
+# -2.5999 -0.4120  0.1779  0.5083  1.4060 
+# 
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)    -0.026995   0.005217  -5.174 2.31e-07 ***
+#   decod.comp_bct  0.596127   0.005265 113.225  < 2e-16 ***
+#   ---
+#   Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+# 
+# Residual standard error: 0.8039 on 23750 degrees of freedom
+# Multiple R-squared:  0.3506,	Adjusted R-squared:  0.3505 
+# F-statistic: 1.282e+04 on 1 and 23750 DF,  p-value: < 2.2e-16
