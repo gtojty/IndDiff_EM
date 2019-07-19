@@ -1,4 +1,4 @@
-## Interactions Between Lexical Properties and Skill Differences in Eye Movement Patterns During Online Sentence Reading
+## How Skill Differences Affect Online Reading Behavior via Interactions with  Lexical Properties: An Eye-Movement Experiment
 
 ***
 
