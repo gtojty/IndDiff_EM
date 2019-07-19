@@ -17,4 +17,4 @@ The raw and pre-processed data are stored in the subfolder ./data/res_F. The pro
 The other codes, including R-squared.r, drawMainEffect_Int.r, and mer.r are called by resF_preparedata.r and resF_analysis.r.
 
 Please cite the paper when using the data and codes shared here.
-Tao Gong, Clint Jones, James S. Magnuson, W. Einar Mencl, Whitney Tabor, Julie A. Van Dyke, Leonard Katz, Donald P. Shankweiler, & David Braze1. Interactions Between Lexical Properties and Skill Differences in Eye Movement Patterns During Online Sentence Reading. *Scientific Studies of Reading*. Submitted.
+Tao Gong, Clint Jones, James S. Magnuson, W. Einar Mencl, Whitney Tabor, Julie A. Van Dyke, Leonard Katz, Donald P. Shankweiler, & David Braze1. How skill differences affect online reading behavior via interactions with lexical properties: An eye-movement experiment. *Scientific Studies of Reading*. Submitted.
